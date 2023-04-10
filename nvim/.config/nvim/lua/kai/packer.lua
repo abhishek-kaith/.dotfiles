@@ -17,7 +17,7 @@ return require('packer').startup(function(use)
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
   use 'wbthomason/packer.nvim'
-
+  use { "catppuccin/nvim", as = "catppuccin" }
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
 	  -- or                            , branch = '0.1.x',
