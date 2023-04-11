@@ -45,7 +45,7 @@ for_window [app_id="kitty"] resize set 800 600
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
- output * bg ~/Pictures/cat.jpg fill
+ output * bg ~/Pictures/wallpaper/wall.png fill
 #
 # Example configuration:
 #
@@ -92,6 +92,9 @@ bindsym $mod+Shift+q kill
 
 # Start your launcher
 bindsym $mod+d exec $menu
+
+# Start Nautilus
+bindsym ctrl+e exec $explorer
 
 # Power menu
 bindsym $mod+Shift+e exec ~/.config/sway/scripts/wofi-power.sh
@@ -228,7 +231,10 @@ bar {
 
 # Mako notification
 exec_always mako
+exec_always nm-applet --indicator
 
+exec_always /usr/bin/polkit-dumb-agent
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 # Hide away cursor after 4 secs idle, put back to the screen on mouse active
 exec hideaway 4 10000 10000 -512 -256
 
