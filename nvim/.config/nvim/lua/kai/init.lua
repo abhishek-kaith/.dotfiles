@@ -1,3 +1,3 @@
 require("kai.set")
 require("kai.key")
-require("kai.packer")
+require("kai.lazy")

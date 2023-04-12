@@ -1,43 +1,30 @@
-vim.opt.guicursor = ""
+local opt = vim.opt
 
-vim.opt.clipboard:append("unnamedplus") -- use system clipboard as default register
+opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 
-vim.opt.nu = true
-vim.opt.relativenumber = true
+opt.guicursor = ""
+opt.termguicolors = true
+opt.signcolumn = "yes"
+opt.colorcolumn = "80"
+opt.cursorline = true
 
-vim.opt.expandtab = true
+opt.nu = true
+opt.rnu = true
+opt.ignorecase = true
+opt.smartcase = true
+opt.hlsearch = false
+opt.incsearch = true
+opt.scrolloff = 8
 
-vim.opt.termguicolors = true
-vim.opt.signcolumn = "yes"
-vim.opt.cursorline = true
+opt.tabstop = 4
+opt.softtabstop = 4
+opt.shiftwidth = 4
+opt.expandtab = true
+    
+opt.smartindent = true
+opt.wrap = false
 
-
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
-
-vim.opt.smartindent = true
-
-vim.opt.wrap = false
-
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-vim.opt.undofile = true
-
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
-
-vim.opt.termguicolors = true
-
-vim.opt.scrolloff = 8
-vim.opt.signcolumn = "yes"
-vim.opt.isfname:append("@-@")
-
-vim.opt.updatetime = 50
-
-vim.opt.colorcolumn = "80"
+opt.swapfile = false
+opt.backup = false
+opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+opt.undofile = true
