@@ -235,6 +235,8 @@ exec_always nm-applet --indicator
 
 exec_always /usr/bin/polkit-dumb-agent
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec wl-paste -t text --watch clipman store --no-persist
+
 # Hide away cursor after 4 secs idle, put back to the screen on mouse active
 exec hideaway 4 10000 10000 -512 -256
 

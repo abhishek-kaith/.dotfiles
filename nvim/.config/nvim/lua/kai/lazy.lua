@@ -12,14 +12,14 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    "mbbill/undotree",
     { "catppuccin/nvim",                 as = "catppuccin" },
     {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.1',
         -- or                              , branch = '0.1.1',
         dependencies = { 'nvim-lua/plenary.nvim' }
-    }, { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
+    },
+    { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
     {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
@@ -41,5 +41,25 @@ require("lazy").setup({
             { 'L3MON4D3/LuaSnip' },
             { 'rafamadriz/friendly-snippets' },
         }
-    }, "folke/zen-mode.nvim"
+    },
+    -- lsp spinner
+    'j-hui/fidget.nvim',
+
+    -- auto closing
+    "windwp/nvim-autopairs",                                 -- autoclose parens, brackets, quotes, etc...
+    { "windwp/nvim-ts-autotag", after = "nvim-treesitter" }, -- autoclose tags
+
+    -- git integration
+    "lewis6991/gitsigns.nvim", -- show line modifications on left hand side
+
+    "numToStr/Comment.nvim",   -- comments with gc
+    "mbbill/undotree",         -- undo
+
+    -- statusline
+    "nvim-lualine/lualine.nvim",
+
+    -- vs-code like icons
+    "nvim-tree/nvim-web-devicons",
+
+    "folke/zen-mode.nvim",
 })

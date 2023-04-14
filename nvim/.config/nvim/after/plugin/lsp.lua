@@ -23,7 +23,7 @@ local lsp_format_on_save = function(bufnr)
 end
 
 -- Fix Undefined global 'vim'
-lsp.configure('lua-language-server', {
+lsp.configure('lua_ls', {
     settings = {
         Lua = {
             diagnostics = {
@@ -82,3 +82,5 @@ lsp.setup()
 vim.diagnostic.config({
     virtual_text = true
 })
+
+require "fidget".setup {}
