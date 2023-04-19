@@ -34,13 +34,8 @@ gaps inner 10
 #
 # Gnome application
 for_window [app_id="org.gnome.Nautilus"] floating enable
-for_window [app_id="org.gnome.Calculator"] floating enable
-for_window [app_id="org.gnome.Settings"] floating enable, resize set 800 600
-#
 # Others
-for_window [app_id="eog"] floating enable
-for_window [app_id="sublime_text"] floating enable, resize set 800 600
-for_window [app_id="kitty"] resize set 800 600
+for_window [app_id="blueman-manager"] floating enable, resize set 800 600
 
 ### Output configuration
 #
