@@ -1,6 +1,7 @@
 local opt = vim.opt
 
-opt.clipboard:append("unnamedplus") -- use system clipboard as default register
+-- use system clipboard as default register
+opt.clipboard:append("unnamedplus")
 
 opt.guicursor = ""
 opt.termguicolors = true
@@ -20,7 +21,7 @@ opt.tabstop = 4
 opt.softtabstop = 4
 opt.shiftwidth = 4
 opt.expandtab = true
-    
+
 opt.smartindent = true
 opt.wrap = false
 

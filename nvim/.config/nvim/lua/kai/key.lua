@@ -41,7 +41,7 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 -- vim.keymap.set("n", "Q", "<nop>")
 
 -- Map <C-f> in normal mode to open new tmux window with tmux-sessionizer script
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww sessionizer<CR>")
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- Map <leader>f in normal mode to format current buffer using LSP
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
