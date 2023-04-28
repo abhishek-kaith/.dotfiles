@@ -94,7 +94,7 @@ lsp.format_on_save({
 		timeout_ms = 10000,
 	},
 	servers = {
-		["null-ls"] = { "javascript", "typescript", "lua", "typescriptreact", "lua" },
+		["null-ls"] = { "javascript", "typescript", "lua", "typescriptreact", "astro" },
 	},
 })
 
@@ -110,7 +110,7 @@ null_ls.setup({
 	sources = {
 		-- Replace these with the tools you have installed
 		null_ls.builtins.formatting.prettier,
-		null_ls.builtins.diagnostics.eslint,
+		-- null_ls.builtins.diagnostics.eslint,
 		null_ls.builtins.formatting.stylua,
 	},
 })
