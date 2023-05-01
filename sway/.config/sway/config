@@ -89,7 +89,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec $menu
 
 # Start Nautilus
-bindsym ctrl+e exec $explorer
+# bindsym ctrl+e exec $explorer
 
 # Power menu
 bindsym $mod+Shift+e exec ~/.config/sway/scripts/wofi-power.sh
