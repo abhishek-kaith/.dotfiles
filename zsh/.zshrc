@@ -90,4 +90,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # bindkey -s '^h' 'tmux neww tmux-cht.sh^M'
+alias sdb="xdg-settings set default-web-browser firefox.deskto"
 bindkey -s '^f' 'tmux-sessionizer^M'

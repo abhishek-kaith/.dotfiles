@@ -16,5 +16,3 @@ export PATH="/home/kai/.turso:$PATH"
 
 # NVM
 # source /usr/share/nvm/init-nvm.sh
-
-
