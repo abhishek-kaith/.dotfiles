@@ -45,8 +45,9 @@ require("lazy").setup({
 			"jose-elias-alvarez/null-ls.nvim",
 			{
 				"j-hui/fidget.nvim",
+                tag="legacy",
 				config = function()
-					require("fidget").setup({})
+					require("fidget").setup()
 				end,
 			},
 		},
