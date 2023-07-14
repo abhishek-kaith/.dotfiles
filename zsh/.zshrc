@@ -8,7 +8,7 @@ print() {
 }
 
 PURE_CMD_MAX_EXEC_TIME=10
-zstyle :prompt:pure:path color white
+# zstyle :prompt:pure:path color white
 zstyle ':prompt:pure:prompt:*' color cyan
 zstyle :prompt:pure:git:stash show yes
 prompt pure
@@ -27,6 +27,7 @@ setopt HIST_EXPIRE_DUPS_FIRST
 setopt EXTENDED_HISTORY
 
 ###
+alias ls='ls --color=auto'
 alias sdb="xdg-settings set default-web-browser firefox.desktop"
 bindkey -s '^f' 'tmux-sessionizer^M'
 bindkey -s '^g' 'tmux neww tmux-cht.sh^M'
