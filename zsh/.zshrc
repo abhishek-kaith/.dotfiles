@@ -1,7 +1,4 @@
-#
-# .zshrc
-#
-
+# ZSHPURE
 fpath+=($HOME/.zsh/pure)
 autoload -U promptinit; promptinit
 
@@ -19,6 +16,15 @@ prompt pure
 #Plugins
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# History setup
+setopt APPEND_HISTORY
+setopt SHARE_HISTORY
+HISTFILE=$HOME/.zsh_history
+SAVEHIST=1000
+HISTSIZE=999
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt EXTENDED_HISTORY
 
 ###
 alias sdb="xdg-settings set default-web-browser firefox.desktop"
