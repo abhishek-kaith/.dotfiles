@@ -2,8 +2,8 @@ env:
   TERM: xterm-256color 
 window:
   padding:
-    x: 20
-    y: 20
+    x: 10
+    y: 10
 font:
   normal:
     family: Fira Code 
@@ -17,7 +17,7 @@ font:
   size: 18.0
 import:
   # uncomment the flavour you want below:
-  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
-#  - ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
-#  - ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
-#  - ~/.config/alacritty/catppuccin/catppuccin-latte.yml 
+   - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+  # - ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
+ # - ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
+ # - ~/.config/alacritty/catppuccin/catppuccin-latte.yml 
