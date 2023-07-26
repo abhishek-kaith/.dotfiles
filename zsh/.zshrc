@@ -29,5 +29,8 @@ setopt EXTENDED_HISTORY
 ###
 alias ls='ls --color=auto'
 alias sdb="xdg-settings set default-web-browser firefox.desktop"
+alias pwr='sudo ryzenadj --stapm-limit=15000 --fast-limit=15000 --slow-limit=15000 --tctl-temp=80'
 bindkey -s '^f' 'tmux-sessionizer^M'
 bindkey -s '^g' 'tmux neww tmux-cht.sh^M'
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
