@@ -7,7 +7,6 @@ lsp.ensure_installed({
 	"cssls",
 	"denols",
 	"emmet_language_server",
-	"gopls",
 	"lua_ls",
 	"pyright",
 	"rust_analyzer",
