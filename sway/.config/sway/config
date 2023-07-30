@@ -110,8 +110,10 @@ floating_modifier $mod normal
 bindsym $mod+Shift+r reload
 
 # Brightness control
-bindsym XF86MonBrightnessUp exec light -A 5
-bindsym XF86MonBrightnessDown exec light -U 5
+# bindsym XF86MonBrightnessUp exec light -A 5
+# bindsym XF86MonBrightnessDown exec light -U 5
+ bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +2% 
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 2%- 
 
 # Volume control
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
