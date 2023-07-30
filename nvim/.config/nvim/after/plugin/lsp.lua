@@ -1,11 +1,13 @@
 local lsp = require("lsp-zero")
+local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
+local cmp = require("cmp")
+local null_ls = require("null-ls")
 
 lsp.preset("recommended")
 
 lsp.ensure_installed({
 	"astro",
 	"cssls",
-	"denols",
 	"emmet_language_server",
 	"lua_ls",
 	"pyright",
@@ -15,18 +17,6 @@ lsp.ensure_installed({
 	"tsserver",
 })
 
--- Fix Undefined global 'vim'
-lsp.configure("lua_ls", {
-	settings = {
-		Lua = {
-			diagnostics = {
-				globals = { "vim" },
-			},
-		},
-	},
-})
-
-local cmp = require("cmp")
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp.defaults.cmp_mappings({
 	["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
@@ -88,22 +78,32 @@ lsp.on_attach(function(client, bufnr)
 	end, opts)
 end)
 
--- lsp.format_on_save({
--- 	format_opts = {
--- 		timeout_ms = 10000,
--- 	},
--- 	servers = {
--- 		["null-ls"] = { "javascript", "typescript", "lua" },
--- 	},
--- })
+-- Fix Undefined global 'vim'
+lsp.configure("lua_ls", {
+	settings = {
+		Lua = {
+			diagnostics = {
+				globals = { "vim" },
+			},
+		},
+	},
+})
 
-lsp.format_on_save({
-	format_opts = {
-		timeout_ms = 10000,
-	},
-	servers = {
-		["null-ls"] = { "javascript", "typescript", "lua", "typescriptreact", "astro", "php" },
-	},
+require("lspconfig").tsserver.setup({
+	capabilities = lsp_capabilities,
+	root_dir = require("lspconfig").util.root_pattern("package.json"),
+	on_attach = function(client, bufnr)
+		lsp.default_keymaps({ buffer = bufnr })
+	end,
+})
+
+require("lspconfig").denols.setup({
+	capabilities = lsp_capabilities,
+	root_dir = require("lspconfig").util.root_pattern("deno.json", "deno.jsonc"),
+	single_file_support = false,
+	on_attach = function(client, bufnr)
+		lsp.default_keymaps({ buffer = bufnr })
+	end,
 })
 
 lsp.configure("intelephense", {
@@ -179,7 +179,14 @@ vim.diagnostic.config({
 	virtual_text = true,
 })
 
-local null_ls = require("null-ls")
+lsp.format_on_save({
+	format_opts = {
+		timeout_ms = 10000,
+	},
+	servers = {
+		["null-ls"] = { "javascript", "typescript", "lua", "typescriptreact", "astro", "php" },
+	},
+})
 
 null_ls.setup({
 	sources = {
