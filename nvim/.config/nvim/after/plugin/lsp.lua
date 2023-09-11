@@ -3,6 +3,10 @@ local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
 local cmp = require("cmp")
 local null_ls = require("null-ls")
 
+local luasnip = require("luasnip")
+require("luasnip.loaders.from_vscode").lazy_load()
+luasnip.config.setup({})
+
 lsp.preset("recommended")
 
 lsp.ensure_installed({
