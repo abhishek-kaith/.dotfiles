@@ -17,7 +17,8 @@ set $menu wofi | xargs swaymsg exec --
 set $explorer nautilus
 
 # Font
-font pango: RobotoMono:style=Regular 14
+# font pango: RobotoMono:style=Regular 14
+font pango: JetBrainsMono Nerd Font:style=Regular 14
 
 # Window borders
 default_border pixel 2
