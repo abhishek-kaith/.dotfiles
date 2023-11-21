@@ -41,7 +41,7 @@ for_window [app_id="blueman-manager"] floating enable, resize set 800 600
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
- output * bg ~/Pictures/wallpaper/wall.png fill
+ output * bg ~/wallpapers/wall.png fill
 #
 # Example configuration:
 #

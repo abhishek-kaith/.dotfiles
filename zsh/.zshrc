@@ -33,6 +33,4 @@ alias pwr='sudo ryzenadj --stapm-limit=15000 --fast-limit=15000 --slow-limit=150
 alias shopify='npx shopify'
 bindkey -s '^f' 'tmux-sessionizer^M'
 bindkey -s '^g' 'tmux neww tmux-cht.sh^M'
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
 ###
