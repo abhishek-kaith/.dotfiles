@@ -28,6 +28,7 @@ setopt EXTENDED_HISTORY
 
 ###
 alias ls='ls --color=auto'
+alias vim='nvim'
 alias sdb="xdg-settings set default-web-browser firefox.desktop"
 alias pwr='sudo ryzenadj --stapm-limit=15000 --fast-limit=15000 --slow-limit=15000 --tctl-temp=80'
 alias shopify='npx shopify'
