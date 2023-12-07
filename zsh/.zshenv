@@ -2,7 +2,7 @@
 export PATH="$HOME/.local/scripts:$PATH"
 
 #Rust
-. "$HOME/.cargo/env"
+#. "$HOME/.cargo/env"
 
 # Go 
 export PATH=$PATH:/usr/local/go/bin
