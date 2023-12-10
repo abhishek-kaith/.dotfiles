@@ -6,9 +6,9 @@
 @define-color slt_bg #7f849c;
 
 window {
-    border: 4px solid @brd;
+    border: 2px solid @brd;
     background-color: @bg;
-    border-radius: 16px;
+    border-radius: 10px;
     font-family: "Roboto Mono";
 }
 

@@ -1,5 +1,5 @@
 # Local Scripts
-export PATH="$HOME/.local/scripts:$PATH"
+export PATH="$HOME/.scripts:$PATH"
 
 #Rust
 #. "$HOME/.cargo/env"
