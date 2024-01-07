@@ -1,1 +1,1 @@
-require("kai")
+require("config")
