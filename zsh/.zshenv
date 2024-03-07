@@ -6,6 +6,7 @@ export PATH="$HOME/.scripts:$PATH"
 
 # Go 
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$(go env GOPATH)/bin
 
 # Volta 
 export VOLTA_HOME="$HOME/.volta"
