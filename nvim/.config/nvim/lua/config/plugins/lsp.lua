@@ -273,6 +273,7 @@ return {
 			})
 		end,
 	},
+
 	{ -- Autoformat
 		"stevearc/conform.nvim",
 		opts = {
@@ -282,17 +283,28 @@ return {
 				lsp_fallback = true,
 			},
 			formatters_by_ft = {
+				bash = { "shfmt" },
+				sh = { "shfmt" },
 				lua = { "stylua" },
-				-- Conform can also run multiple formatters sequentially
-				-- python = { "isort", "black" },
-				--
-				-- You can use a sub-list to tell conform to run *until* a formatter
-				-- is found.
+				go = { "goimports", "gofumpt", "goimports-reviser" },
 				javascript = { { "prettierd", "prettier" } },
 				typescript = { { "prettierd", "prettier" } },
-				html = { { "prettierd", "prettier" } },
+				javascriptreact = { { "prettierd", "prettier" } },
+				typescriptreact = { { "prettierd", "prettier" } },
+				astro = { { "prettierd", "prettier" } },
+				svelte = { { "prettierd", "prettier" } },
+				vue = { { "prettierd", "prettier" } },
 				css = { { "prettierd", "prettier" } },
+				scss = { { "prettierd", "prettier" } },
+				less = { { "prettierd", "prettier" } },
+				html = { { "prettierd", "prettier" } },
+				json = { { "prettierd", "prettier" } },
+				jsonc = { { "prettierd", "prettier" } },
+				yaml = { { "prettierd", "prettier" } },
 				markdown = { { "prettierd", "prettier" } },
+				["markdown.mdx"] = { { "prettierd", "prettier" } },
+				graphql = { { "prettierd", "prettier" } },
+				handlebars = { { "prettierd", "prettier" } },
 			},
 		},
 	},
