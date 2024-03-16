@@ -276,37 +276,49 @@ return {
 
 	{ -- Autoformat
 		"stevearc/conform.nvim",
-		opts = {
-			notify_on_error = false,
-			format_on_save = {
-				timeout_ms = 5000,
-				lsp_fallback = true,
-			},
-			formatters_by_ft = {
-				bash = { "shfmt" },
-				sh = { "shfmt" },
-				lua = { "stylua" },
-				go = { "goimports", "gofumpt", "goimports-reviser" },
-				javascript = { { "prettierd", "prettier" } },
-				typescript = { { "prettierd", "prettier" } },
-				javascriptreact = { { "prettierd", "prettier" } },
-				typescriptreact = { { "prettierd", "prettier" } },
-				astro = { "prettierd", "prettier" },
-				svelte = { { "prettierd", "prettier" } },
-				vue = { { "prettierd", "prettier" } },
-				css = { { "prettierd", "prettier" } },
-				scss = { { "prettierd", "prettier" } },
-				less = { { "prettierd", "prettier" } },
-				html = { { "prettierd", "prettier" } },
-				json = { { "prettierd", "prettier" } },
-				jsonc = { { "prettierd", "prettier" } },
-				yaml = { { "prettierd", "prettier" } },
-				markdown = { { "prettierd", "prettier" } },
-				["markdown.mdx"] = { { "prettierd", "prettier" } },
-				graphql = { { "prettierd", "prettier" } },
-				handlebars = { { "prettierd", "prettier" } },
-			},
-		},
+		config = function()
+			local options = {
+				notify_on_error = false,
+				-- format_on_save = {
+				-- 	timeout_ms = 5000,
+				-- 	lsp_fallback = true,
+				-- },
+				formatters_by_ft = {
+					bash = { "shfmt" },
+					sh = { "shfmt" },
+					lua = { "stylua" },
+					go = { "goimports", "gofumpt", "goimports-reviser" },
+					javascript = { { "prettierd", "prettier" } },
+					typescript = { { "prettierd", "prettier" } },
+					javascriptreact = { { "prettierd", "prettier" } },
+					typescriptreact = { { "prettierd", "prettier" } },
+					astro = { "prettierd", "prettier" },
+					svelte = { { "prettierd", "prettier" } },
+					vue = { { "prettierd", "prettier" } },
+					css = { { "prettierd", "prettier" } },
+					scss = { { "prettierd", "prettier" } },
+					less = { { "prettierd", "prettier" } },
+					html = { { "prettierd", "prettier" } },
+					json = { { "prettierd", "prettier" } },
+					jsonc = { { "prettierd", "prettier" } },
+					yaml = { { "prettierd", "prettier" } },
+					markdown = { { "prettierd", "prettier" } },
+					["markdown.mdx"] = { { "prettierd", "prettier" } },
+					graphql = { { "prettierd", "prettier" } },
+					handlebars = { { "prettierd", "prettier" } },
+				},
+			}
+			require("conform").setup(options)
+			function Format()
+				require("conform").format({
+					lsp_fallback = true,
+					timeout_ms = 5000,
+					async = true,
+				})
+			end
+			vim.api.nvim_create_user_command("Format", Format, {})
+			vim.keymap.set("n", "<leader>f", Format, { noremap = true, silent = true })
+		end,
 	},
 	{ -- Autocompletion
 		"hrsh7th/nvim-cmp",
