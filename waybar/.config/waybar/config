@@ -1,5 +1,5 @@
 {
-  "layer": "top",
+    "layer": "top",
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
     "modules-right": ["backlight", "pulseaudio", "bluetooth", "network", "battery", "tray"],
@@ -49,6 +49,7 @@
       "interface": "wlan0",
       "format": "  {bandwidthDownBytes}",
       "format-disconnected": "<span color='#b4befe'>󰖪 </span>No Network",
+      "interval": 1,
       "tooltip": false,
     },
     "battery": {
@@ -57,4 +58,7 @@
       "format-charging": "<span color='#b4befe'></span> {capacity}%",
       "tooltip": false,
     },
+    "tray": {
+      "spacing": 10,
+    }
 }
