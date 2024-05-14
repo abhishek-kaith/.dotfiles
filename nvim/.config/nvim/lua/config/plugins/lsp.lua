@@ -202,11 +202,13 @@ return {
 								"wp-cli-stubs",
 								"genesis-stubs",
 								"polylang-stubs",
+                                "elementor-stubs",
 							},
 							environment = {
 								includePaths = {
 									string.format("%s/.config/composer/vendor/php-stubs/", os.getenv("HOME")),
 									string.format("%s/.config/composer/vendor/wpsyntex/", os.getenv("HOME")),
+                                    string.format("%s/.config/composer/vendor/arifpavel/", os.getenv("HOME")),
 								},
 							},
 							files = {
