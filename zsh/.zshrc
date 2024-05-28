@@ -35,5 +35,3 @@ alias sdb="xdg-settings set default-web-browser thorium-browser.desktop"
 bindkey -s '^f' 'tmux-sessionizer^M'
 bindkey -s '^g' 'tmux neww tmux-cht.sh^M'
 eval "$(rbenv init - zsh)"
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
