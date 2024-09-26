@@ -1,6 +1,7 @@
 # ZSHPURE
 fpath+=($HOME/.zsh/pure)
 autoload -U promptinit; promptinit
+autoload -Uz compinit && compinit
 
 # prompt_newline='%666v' PROMPT=" $PROMPT"
 print() {
@@ -29,9 +30,9 @@ setopt EXTENDED_HISTORY
 ###
 alias ls='ls --color=auto'
 alias vim='nvim'
-# alias sdb="xdg-settings set default-web-browser firefox.desktop"
-alias sdb="xdg-settings set default-web-browser thorium-browser.desktop"
-# alias pwr='sudo ryzenadj --stapm-limit=15000 --fast-limit=15000 --slow-limit=15000 --tctl-temp=80'
+alias wproxystart="adb shell settings put global http_proxy 192.168.240.1:8080"
+alias wproxystop="adb shell settings put global http_proxy :0"
+alias sdb="xdg-settings set default-web-browser zen-browser.desktop"
 bindkey -s '^f' 'tmux-sessionizer^M'
 bindkey -s '^g' 'tmux neww tmux-cht.sh^M'
 eval "$(rbenv init - zsh)"
