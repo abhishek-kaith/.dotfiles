@@ -30,6 +30,7 @@ setopt EXTENDED_HISTORY
 ###
 alias ls='ls --color=auto'
 alias vim='nvim'
+alias gitdot="git remote remove origin; git remote add origin git@github.com:abhishek-kaith/.dotfiles.git;"
 alias wproxystart="adb shell settings put global http_proxy 192.168.240.1:8080"
 alias wproxystop="adb shell settings put global http_proxy :0"
 alias sdb="xdg-settings set default-web-browser zen-browser.desktop"

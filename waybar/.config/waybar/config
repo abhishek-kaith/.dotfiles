@@ -46,7 +46,7 @@
       "format-connected": "<span color='#b4befe'></span> {num_connections}",
       "tooltip-format": "{device_enumerate}",
       "tooltip-format-enumerate-connected": "{device_alias}   {device_address}",
-      "on-click": "blueman-manager"
+      "on-click": "alacritty -e bluetoothctl"
     },
     "network": {
       "interface": "wlan0",
@@ -54,7 +54,7 @@
       "format-disconnected": "<span color='#b4befe'>󰖪 </span>No Network",
       "interval": 1,
       "tooltip": false,
-      "on-click": "alacritty -e nmtui"
+      "on-click": "alacritty -e iwctl"
     },
     "battery": {
       "format": "<span color='#b4befe'>{icon}</span> {capacity}%",
