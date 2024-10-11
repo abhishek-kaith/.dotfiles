@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Find all directories (excluding subdirectories and .git) 
+dirs=$(find . -maxdepth 1 -type d ! -path '.' ! -name '.git')
+
+# Loop through each directory and stow it
+for dir in $dirs
+do
+  stow -D $(basename $dir)
+  stow $(basename $dir)
+done
