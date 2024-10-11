@@ -32,6 +32,8 @@ window#waybar {
 #workspaces button {
   background: #11111b;
   color: #b4befe;
+  box-shadow: none;
+  padding: 4px 10px;
 }
 
 #clock,
