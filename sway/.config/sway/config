@@ -213,7 +213,6 @@ bar {
   swaybar_command waybar
 }
 
-
 # Mako notification
 exec_always mako
 
