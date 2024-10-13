@@ -14,7 +14,7 @@ set $menu wofi | xargs swaymsg exec --
 set $explorer nemo  
 
 # Font
-font pango: Fira Sans:style=Regular 14
+font pango: Noto Sans:style=Regular 14
 
 # Window borders
 default_border pixel 2
@@ -22,7 +22,7 @@ default_floating_border normal
 smart_borders on
 
 # Gaps
-gaps inner 10
+gaps inner 5
 
 # Disable focus follow mouse
 # focus_follows_mouse no
@@ -87,7 +87,7 @@ bindsym $mod+Shift+e exec ~/.config/sway/scripts/wofi-power.sh
 # Snipping tool
 bindsym $mod+p exec grim -l 0 -g "$(slurp -d)" - | wl-copy -t image/png
 # Screenshot
-bindsym $mod+a exec grim -l 0 - | wl-copy -t image/png
+bindsym $mod+Shift+p exec grim -l 0 - | wl-copy -t image/png
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
@@ -216,9 +216,14 @@ bar {
 # Mako notification
 exec_always mako
 
+# Clipboard
+exec --no-startup-id wl-paste -t text --watch clipman store
+exec --no-startup-id clipman restore
+bindsym $mod+a exec clipman pick -t bemenu
+
 exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec wl-paste -t text --watch clipman store --no-persist
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec --no-startup-id /usr/lib/xdg-desktop-portal -r
 
 # Hide away cursor after 4 secs idle, put back to the screen on mouse active
 exec hideaway 4 10000 10000 -512 -256

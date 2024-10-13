@@ -9,7 +9,7 @@ window {
     border: 2px solid @brd;
     background-color: @bg;
     border-radius: 10px;
-    font-family: "Roboto Mono";
+    font-family: "Noto Sans";
 }
 
 #input {
