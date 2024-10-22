@@ -33,6 +33,7 @@ gaps inner 5
 for_window [app_id="org.gnome.Nautilus"] floating enable
 # Others
 for_window [app_id="blueman-manager"] floating enable, resize set 800 600
+for_window [app_id="pavucontrol"] floating enable, resize set 800 600
 
 ### Output configuration
 #
