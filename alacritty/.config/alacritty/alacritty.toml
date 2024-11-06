@@ -1,6 +1,6 @@
 # alacritty.toml
 
-import = [
+general.import = [
  "~/.config/alacritty/themes/rose-pine.toml",
 ]
 
