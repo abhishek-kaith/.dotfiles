@@ -9,7 +9,7 @@ set $up k
 set $right l
 # Terminal
 set $term alacritty
-set $menu wofi | xargs swaymsg exec --
+set $menu wofi run --show drun
 # File explorer
 set $explorer nemo  
 
