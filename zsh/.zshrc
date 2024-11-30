@@ -19,7 +19,8 @@ HISTSIZE=999
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt EXTENDED_HISTORY
 
-###
+# Vim mode
+bindkey -v
 alias ls='ls --color=auto'
 alias vim='nvim'
 alias gitdot="git remote remove origin; git remote add origin git@github.com:abhishek-kaith/.dotfiles.git;"
@@ -28,4 +29,3 @@ alias wproxystop="adb shell settings put global http_proxy :0"
 alias sdb="xdg-settings set default-web-browser firefox.desktop"
 bindkey -s '^f' 'tmux-sessionizer^M'
 bindkey -s '^g' 'tmux neww tmux-cht.sh^M'
-###
