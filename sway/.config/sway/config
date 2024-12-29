@@ -8,7 +8,7 @@ set $down j
 set $up k
 set $right l
 # Terminal
-set $term alacritty
+set $term ghostty 
 set $menu wofi run --show drun
 # File explorer
 set $explorer nemo  
