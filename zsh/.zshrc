@@ -21,7 +21,7 @@ setopt EXTENDED_HISTORY
 
 # Vim mode
 bindkey -v
-alias ls='ls --color=auto'
+alias ls='exa'
 alias vim='nvim'
 alias gitdot="git remote remove origin; git remote add origin git@github.com:abhishek-kaith/.dotfiles.git;"
 alias wproxystart="adb shell settings put global http_proxy 192.168.240.1:8080"
